@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: CF7 Honeypot Lite
- * Plugin URI:  https://github.com/samkobe/cf7-honeypot-lite
+ * Plugin URI:  https://github.com/samuelkobe/CF7-Honeypot-Lite
  * Description: Lightweight honeypot spam protection for Contact Form 7. Drop-in replacement for bloated alternatives — zero config, just add [honeypot] to your form.
  * Version:     1.0.0
  * Requires at least: 6.2
