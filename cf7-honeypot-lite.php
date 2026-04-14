@@ -8,7 +8,7 @@
  * Requires PHP: 7.4
  * Requires Plugins: contact-form-7
  * Author:      Web Ok Solutions Inc.
- * Author URI:  https://webok.ca
+ * Author URI:  https://webok.ca/
  * License:     GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: cf7-honeypot-lite

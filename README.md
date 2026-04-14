@@ -1,4 +1,5 @@
 # CF7 Honeypot Lite
+
 ### Lightweight spam protection for Contact Form 7
 
 Adds a hidden honeypot field to CF7 forms that catches spam bots without CAPTCHA friction. Zero configuration — just drop `[honeypot]` into your form template. Bots that fill the field are silently rejected with a fake success response so they never learn to adapt.
@@ -40,6 +41,7 @@ That's it. No settings to configure.
 Click the **honeypot** button above the form template textarea — it opens a tag generator dialog to name your field and insert the tag.
 
 **Manually:**
+
 ```
 [honeypot honeypot-field]
 ```
@@ -67,4 +69,4 @@ No. One small CSS file, a few lines of PHP, no JavaScript, no external requests,
 
 ## Author
 
-[Web Ok Solutions Inc.](https://webok.ca)
+[Web Ok Solutions Inc.](https://webok.ca/)
