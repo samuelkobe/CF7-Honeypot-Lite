@@ -12,9 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$tag_generator = WPCF7_TagGenerator::get_instance();
+$wohlcf7_tag_generator = WPCF7_TagGenerator::get_instance();
 
-$tag_generator->add(
+$wohlcf7_tag_generator->add(
 	'honeypot',
 	__( 'honeypot', 'web-ok-honeypot-lite-for-cf7' ),
 	'wohlcf7_tag_generator_honeypot',
