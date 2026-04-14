@@ -17,7 +17,7 @@ $tag_generator = WPCF7_TagGenerator::get_instance();
 $tag_generator->add(
 	'honeypot',
 	__( 'honeypot', 'web-ok-honeypot-lite-for-cf7' ),
-	'cf7hl_tag_generator_honeypot',
+	'wohlcf7_tag_generator_honeypot',
 	[ 'version' => '2' ]
 );
 
@@ -27,7 +27,7 @@ $tag_generator->add(
  * @param WPCF7_ContactForm $contact_form The contact form.
  * @param array             $options      Generator options.
  */
-function cf7hl_tag_generator_honeypot( $contact_form, $options ) {
+function wohlcf7_tag_generator_honeypot( $contact_form, $options ) {
 	$tgg = new WPCF7_TagGeneratorGenerator( $options['content'] );
 
 	$formatter = new WPCF7_HTMLFormatter();

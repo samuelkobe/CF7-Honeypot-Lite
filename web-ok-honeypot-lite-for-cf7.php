@@ -18,31 +18,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CF7_HONEYPOT_LITE_VERSION', '1.0.0' );
-define( 'CF7_HONEYPOT_LITE_PATH', plugin_dir_path( __FILE__ ) );
-define( 'CF7_HONEYPOT_LITE_URL', plugin_dir_url( __FILE__ ) );
+define( 'WOHLCF7_VERSION', '1.0.0' );
+define( 'WOHLCF7_PATH', plugin_dir_path( __FILE__ ) );
+define( 'WOHLCF7_URL', plugin_dir_url( __FILE__ ) );
 
 // Register the [honeypot] form tag.
 add_action( 'wpcf7_init', function () {
-	require_once CF7_HONEYPOT_LITE_PATH . 'includes/form-tag.php';
+	require_once WOHLCF7_PATH . 'includes/form-tag.php';
 } );
 
 // Spam detection via the honeypot field.
 add_filter( 'wpcf7_spam', function ( $spam, $submission ) {
-	require_once CF7_HONEYPOT_LITE_PATH . 'includes/spam-check.php';
-	return cf7hl_check_spam( $spam, $submission );
+	require_once WOHLCF7_PATH . 'includes/spam-check.php';
+	return wohlcf7_check_spam( $spam, $submission );
 }, 10, 2 );
 
 // Silent success — make bots think their submission went through.
 add_filter( 'wpcf7_feedback_response', function ( $response, $result ) {
-	require_once CF7_HONEYPOT_LITE_PATH . 'includes/spam-check.php';
-	return cf7hl_maybe_fake_success( $response, $result );
+	require_once WOHLCF7_PATH . 'includes/spam-check.php';
+	return wohlcf7_maybe_fake_success( $response, $result );
 }, 10, 2 );
 
 // Tag generator button in CF7 form editor (admin only).
 if ( is_admin() ) {
 	add_action( 'wpcf7_admin_init', function () {
-		require_once CF7_HONEYPOT_LITE_PATH . 'includes/tag-generator.php';
+		require_once WOHLCF7_PATH . 'includes/tag-generator.php';
 	} );
 }
 
@@ -50,8 +50,8 @@ if ( is_admin() ) {
 add_action( 'wpcf7_enqueue_scripts', function () {
 	wp_enqueue_style(
 		'web-ok-honeypot-lite-for-cf7',
-		CF7_HONEYPOT_LITE_URL . 'assets/css/honeypot.css',
+		WOHLCF7_URL . 'assets/css/honeypot.css',
 		[],
-		CF7_HONEYPOT_LITE_VERSION
+		WOHLCF7_VERSION
 	);
 } );

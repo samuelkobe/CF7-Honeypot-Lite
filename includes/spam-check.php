@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param WPCF7_Submission  $submission The submission instance.
  * @return bool
  */
-function cf7hl_check_spam( $spam, $submission ) {
+function wohlcf7_check_spam( $spam, $submission ) {
 	if ( $spam ) {
 		return $spam; // Already flagged by something else.
 	}
@@ -58,7 +58,7 @@ function cf7hl_check_spam( $spam, $submission ) {
  * @param string $result   The submission result status.
  * @return array
  */
-function cf7hl_maybe_fake_success( $response, $result ) {
+function wohlcf7_maybe_fake_success( $response, $result ) {
 	if ( empty( $result['status'] ) || 'spam' !== $result['status'] ) {
 		return $response;
 	}

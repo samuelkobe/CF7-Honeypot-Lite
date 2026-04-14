@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wpcf7_add_form_tag(
 	'honeypot',
-	'cf7hl_form_tag_handler',
+	'wohlcf7_form_tag_handler',
 	[
 		'name-attr'      => true,
 		'display-hidden' => true,
@@ -24,7 +24,7 @@ wpcf7_add_form_tag(
  * @param WPCF7_FormTag $tag The form tag object.
  * @return string HTML output.
  */
-function cf7hl_form_tag_handler( $tag ) {
+function wohlcf7_form_tag_handler( $tag ) {
 	if ( empty( $tag->name ) ) {
 		return '';
 	}
